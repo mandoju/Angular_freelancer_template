@@ -23,6 +23,14 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit() {
+
+    // funcionalidade para adicionar o scrollspy no header após certa distancia no scroll
+    $('body').scrollspy({
+      target: '#mainNav',
+      offset: 80
+    });
+    // fim da funcionalidade para adiconar o scrollspy
+
   }
 
 }
