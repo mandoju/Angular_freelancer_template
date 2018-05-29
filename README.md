@@ -1,4 +1,4 @@
-# Freelancer Template With angular!
+# Freelancer Template With Angular!
 
 ![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/145px-Angular_full_color_logo.svg.png)
 
