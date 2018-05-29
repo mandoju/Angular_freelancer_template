@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isShrink: boolean = false;
+
+  constructor(zone: NgZone) {
+    window.onscroll = () => {
+      zone.run(() => {
+        if(window.pageYOffset > 0) {
+             this.isShrink = true;
+        } else {
+             this.isShrink = false;
+        }
+      });
+    }
+
+   }
 
   ngOnInit() {
   }
 
 }
+
