@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import  {NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -9,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { CopyrightComponent } from './copyright/copyright.component';
+import { PortfolioItemComponent } from './portfolio/portfolio-item/portfolio-item.component';
+import { PortfolioModalComponent } from './portfolio/portfolio-modal/portfolio-modal.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,16 @@ import { CopyrightComponent } from './copyright/copyright.component';
     AboutComponent,
     ContactComponent,
     FooterComponent,
-    CopyrightComponent
+    CopyrightComponent,
+    PortfolioItemComponent,
+    PortfolioModalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule.forRoot()
+  ],
+  entryComponents:[
+    PortfolioModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

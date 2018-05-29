@@ -1,10 +1,15 @@
 import { Component, OnInit, NgZone } from '@angular/core';
+import * as bootstrap from "bootstrap";
+
+declare var $: any;
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent implements OnInit {
 
   isShrink: boolean = false;
