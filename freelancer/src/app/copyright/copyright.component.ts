@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Copyright } from 'src/app/copyright/copyright.model';
 
 @Component({
   selector: 'app-copyright',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./copyright.component.css']
 })
 export class CopyrightComponent implements OnInit {
+
+  copyright: Copyright = {
+    owner: "Your Website",
+    year: 2018
+  }
 
   constructor() { }
 
