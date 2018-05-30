@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Contact, ContactFocus } from 'src/app/contact/contact.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -26,6 +26,8 @@ export class ContactComponent implements OnInit {
   onFocus: boolean = false
 
   contactForm : FormGroup
+
+  @Input() contactTitle: string
 
   constructor() { this.createContactForm() }
 

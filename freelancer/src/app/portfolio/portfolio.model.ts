@@ -1,4 +1,4 @@
-export interface Portifolio{
+export interface Portfolio{
     name: string,
     image: string,
     description: string,

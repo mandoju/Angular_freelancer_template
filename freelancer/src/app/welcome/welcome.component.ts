@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Welcome } from 'src/app/welcome/welcome.model';
 
 @Component({
@@ -8,10 +8,7 @@ import { Welcome } from 'src/app/welcome/welcome.model';
 })
 export class WelcomeComponent implements OnInit {
 
-  welcome: Welcome = {
-    title: "Start Bootstrap",
-    description: "Web Developer - Graphic Artist - User Experience Designer"
-  }
+  @Input() welcome: Welcome
 
   constructor() { }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Footer } from 'src/app/footer/footer.model';
 
 @Component({
@@ -8,7 +8,8 @@ import { Footer } from 'src/app/footer/footer.model';
 })
 export class FooterComponent implements OnInit {
 
-  footer: Footer = {
+  @Input() footer: Footer
+  /*footer: Footer = {
     leftTitle: "Location",
     leftText: "2215 John Daniel Drive<br/>Clark, MO 65243",
     middleTitle: "Around the Web",
@@ -19,7 +20,7 @@ export class FooterComponent implements OnInit {
     dribbleLink: "http://www.google.com",
     rightTitle:  "About Freelancer",
     rightText: "Freelance is a free to use, open source Bootstrap theme created by <a href=\"http://startbootstrap.com\">Start Bootstrap</a>.",
-  }
+  }*/
 
   constructor() { }
 

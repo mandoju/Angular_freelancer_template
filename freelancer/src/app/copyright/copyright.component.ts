@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Copyright } from 'src/app/copyright/copyright.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { Copyright } from './copyright.model';
 
 @Component({
   selector: 'app-copyright',
@@ -8,10 +8,11 @@ import { Copyright } from 'src/app/copyright/copyright.model';
 })
 export class CopyrightComponent implements OnInit {
 
-  copyright: Copyright = {
+  @Input() copyright: Copyright
+  /*copyright: Copyright = {
     owner: "Your Website",
     year: 2018
-  }
+  }*/
 
   constructor() { }
 

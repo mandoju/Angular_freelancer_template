@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Portifolio } from 'src/app/portfolio/portfolio.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { Portfolio } from './portfolio.model';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,7 +8,9 @@ import { Portifolio } from 'src/app/portfolio/portfolio.model';
 })
 export class PortfolioComponent implements OnInit {
 
-  portfolios: Portifolio[] = [{
+  @Input() portfolios: Portfolio[]
+
+  /*portfolios: Portifolio[] = [{
     name: "PROJECT NAME",
     image: "assets/img/portfolio/cabin.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam."
@@ -37,7 +39,7 @@ export class PortfolioComponent implements OnInit {
     name: "PROJECT NAME",
     image: "assets/img/portfolio/submarine.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam."
-  }]
+  }]*/
 
   constructor() { }
 

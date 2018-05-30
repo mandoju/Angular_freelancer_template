@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Portifolio } from 'src/app/portfolio/portfolio.model';
+import { Portfolio } from 'src/app/portfolio/portfolio.model';
 
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { PortfolioModalComponent } from '../portfolio-modal/portfolio-modal.component';
@@ -12,10 +12,9 @@ import { PortfolioModalComponent } from '../portfolio-modal/portfolio-modal.comp
 })
 export class PortfolioItemComponent implements OnInit {
 
-  @Input() portfolio: Portifolio
+  @Input() portfolio: Portfolio
 
   constructor(private modalService: NgbModal) {
-    
   }
 
   ngOnInit() {

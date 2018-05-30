@@ -2,9 +2,9 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 <app-header>Loading...</app-header>
-<app-welcome></app-welcome>
-<app-portfolio></app-portfolio>
-<app-about></app-about>
-<app-contact></app-contact>
-<app-footer></app-footer>
-<app-copyright></app-copyright>
+<app-welcome [welcome]="data?.welcome"></app-welcome>
+<app-portfolio [portfolios]="data?.portfolios"></app-portfolio>
+<app-about [about]="data?.about"></app-about>
+<app-contact [contactTitle]="data?.contactTitle"></app-contact>
+<app-footer [footer]="data?.footer"></app-footer>
+<app-copyright [copyright]="data?.copyright"></app-copyright>

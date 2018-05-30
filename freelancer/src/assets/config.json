@@ -1,0 +1,35 @@
+{
+    "welcome": {
+        "title": "Jorge Rama Developer",
+        "description": "Analista full stack Web e BI - Mestrando em Banco de dados"
+    },
+    "about": {
+        "title": "Sobre",
+        "leftText": "Olá, eu sou o Jorge. Sou graduado em Ciência da computação pela UFRJ e atualmente estou mestrando na UFRJ pelo PESC (Programa de Engenharia de Sistemas e Computação). Faço parte da linha de pesquisa em Banco de dados e machine Learning",
+        "rightText": "Também faço estágio pelo CapGov. Trabalhei como Analista de Sistemas para plataformas PHP, Joomla, Data Warehouse, Java e Node.js. Desempenho como líder técnico de equipes, tomando as decisões técnicas de como será desenvolvido a plataforma, assim como sua arquitetura."
+    },
+    "portfolios": [{
+        "name": "Portal do PESC",
+        "image": "assets/img/portfolio/cabin.png",
+        "description": "<strong>Tecnologia: Joomla.</strong><br/>Meu primeiro projeto. Reformulação do Portal do Programa Engenharia de Sistemas e Computação (PESC). O portal construído do zero respeitando as regras de negócio do site antigo que estava bastante defazado." 
+    },
+    {
+        "name": "Minha Casa e Minha Vida",
+        "image": "assets/img/portfolio/cake.png",
+        "description": "<strong>Tecnologia: Joomla.</strong><br/>Participei como líder técnico de uma equipe de 6 pessoas para a construção do portal Minha casa e minha vida para o governo. O projeto possui altos graus de otimização pelo joomla e pelo banco de dados devido a grande carga de acessos."
+    }],
+    "contactTitle": "Contato",
+    "footer": {
+        "leftTitle": "Localização",
+        "leftText": "Brasil, Rio de janeiro",
+        "middleTitle": "Estou nas redes sociais",
+        "twitterLink": "http://www.twitter.com/JorgeRama",
+        "linkedinLink": "https://www.linkedin.com/in/jorge-rama-krsna-mandoju-29805797/",
+        "rightTitle": "Sobre o Site",
+        "rightText": "Este Site é uma adaptação usando angular do template freelancer. Este template foi criado por <a href=\"http://startbootstrap.com\">Start Bootstrap</a>"
+    },
+    "copyright": {
+        "owner": "Jorge Rama",
+        "year": "2018"
+    }
+}
