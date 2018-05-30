@@ -22,7 +22,7 @@ export class PortfolioItemComponent implements OnInit {
   }
 
   open(portfolio) {
-    const modalRef = this.modalService.open(PortfolioModalComponent);
+    const modalRef = this.modalService.open(PortfolioModalComponent, {windowClass: 'fade'});
     modalRef.componentInstance.portfolio = portfolio;
   }
   
