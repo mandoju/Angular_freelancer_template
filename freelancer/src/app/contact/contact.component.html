@@ -9,47 +9,47 @@
         <form [formGroup]="contactForm" #formDir="ngForm" name="sentMessage" id="contactForm" novalidate="novalidate">
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2" [ngClass]="{'floating-label-form-group-with-value': name.value.length > 0 , 'floating-label-form-group-with-focus': contactFocus.name}">
-              <label>Name</label>
-              <input class="form-control" id="name" type="text"  placeholder="Name"  formControlName="name" required (focus)="contactFocus.name = true" (blur)="contactFocus.name = false">
+              <label>{{contactLanguage?.nameLabel}}</label>
+              <input class="form-control" id="name" type="text"  [placeholder]="contactLanguage?.nameLabel"  formControlName="name" required (focus)="contactFocus.name = true" (blur)="contactFocus.name = false">
               <div class="text-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
                     <ul>
-                      <li *ngIf="name.errors.required">The name is required.</li>
-                      <li *ngIf="name.errors.minlength">The name need at least 4 characters.</li>
+                      <li *ngIf="name.errors.required">{{contactLanguage?.nameRequiredLabel}}</li>
+                      <li *ngIf="name.errors.minlength">{{contactLanguage?.nameMinLenghtLabel}}</li>
                     </ul>
               </div>
             </div>
           </div> 
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2" [ngClass]="{'floating-label-form-group-with-value': email.value.length > 0 , 'floating-label-form-group-with-focus': contactFocus.email}">
-              <label>Email Address</label>
-              <input class="form-control" id="email" type="email" placeholder="Email Address" formControlName="email" email required (focus)="contactFocus.email = true" (blur)="contactFocus.email = false">
+              <label>{{contactLanguage?.emailLabel}}</label>
+              <input class="form-control" id="email" type="email" [placeholder]="contactLanguage?.emailLabel" formControlName="email" email required (focus)="contactFocus.email = true" (blur)="contactFocus.email = false">
               <div class="text-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
                 <ul>
-                  <li *ngIf="email.errors.required" >The e-mail is required.</li>
-                  <li *ngIf="email.errors.email" >This is not a valid e-mail.</li>
+                  <li *ngIf="email.errors.required" >{{contactLanguage?.emailRequiredLabel}}</li>
+                  <li *ngIf="email.errors.email" >{{contactLanguage?.emailInvalidLabel}}</li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2" [ngClass]="{'floating-label-form-group-with-value': phoneNumber.value.length > 0 , 'floating-label-form-group-with-focus': contactFocus.phoneNumber}">
-              <label>Phone Number</label>
-              <input class="form-control" id="phone" type="tel" placeholder="Phone Number" data-validation-required-message="Please enter your phone number." formControlName="phoneNumber" name="phoneNumber" (focus)="contactFocus.phoneNumber = true" (blur)="contactFocus.phoneNumber = false">
+              <label>{{contactLanguage?.phoneNumberLabel}}</label>
+              <input class="form-control" id="phone" type="tel" [placeholder]="contactLanguage?.phoneNumberLabel" data-validation-required-message="Please enter your phone number." formControlName="phoneNumber" name="phoneNumber" (focus)="contactFocus.phoneNumber = true" (blur)="contactFocus.phoneNumber = false">
               <div class="text-danger" *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
                   <ul>
-                    <li *ngIf="phoneNumber.errors.required" >The phone number is required.</li>
+                    <li *ngIf="phoneNumber.errors.required" >{{contactLanguage?.phoneNumberRequiredLabel}}</li>
                   </ul>
                 </div>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2" [ngClass]="{'floating-label-form-group-with-value': message.value.length > 0 , 'floating-label-form-group-with-focus': contactFocus.message}">
-              <label>Message</label>
-              <textarea class="form-control" id="message" rows="5" placeholder="Message" data-validation-required-message="Please enter a message."  formControlName="message" name="message" (focus)="contactFocus.message = true" (blur)="contactFocus.message = false"></textarea>
+              <label>{{contactLanguage?.messageLabel}}</label>
+              <textarea class="form-control" id="message" rows="5" [placeholder]="contactLanguage?.messageLabel" data-validation-required-message="Please enter a message."  formControlName="message" name="message" (focus)="contactFocus.message = true" (blur)="contactFocus.message = false"></textarea>
               <div class="text-danger" *ngIf="message.invalid && (message.dirty || message.touched)">
                   <ul>
-                    <li *ngIf="message.errors.required" >The message is required.</li>
-                    <li *ngIf="name.errors.minlength">The message need at least 4 characters.</li>
+                    <li *ngIf="message.errors.required" >{{contactLanguage?.messageRequiredLabel}}</li>
+                    <li *ngIf="name.errors.minlength">{{contactLanguage?.messageMinLenghtLabel}}</li>
                   </ul>
                 </div>
             </div>
@@ -57,7 +57,7 @@
           <br>
           <div id="success"></div>
           <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+            <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">{{contactLanguage?.buttonLabel}}</button>
           </div>
         </form>
       </div>
